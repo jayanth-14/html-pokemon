@@ -35,11 +35,11 @@ const generatePageCards = (pageNumber, data) => {
   return pokemons.map(generateCardHtml).join("\n");
 };
 
-const createIndexHtml = async () => {
-  await Deno.copyFile("./html/page1.html", "./html/index.html");
+const createIndexHtml = async (path) => {
+  await Deno.copyFile(`${path}/page1.html`, `${path}/index.html`);
 };
 
-const generateStaticHtml = async (path = "../html/") => {
+const generateStaticHtml = async (path = "./docs") => {
   let pageNumber = 0;
   const pokemonData = JSON.parse(
     await Deno.readTextFile("./data/pokemons.json"),
@@ -48,7 +48,7 @@ const generateStaticHtml = async (path = "../html/") => {
     try {
       const cards = generatePageCards(pageNumber, pokemonData);
       const html = generateHomePage(pageNumber, cards);
-      const filePath = `./html/page${++pageNumber}.html`;
+      const filePath = `${path}/page${++pageNumber}.html`;
       await writeHtmlFile(filePath, html);
       console.log(`page ${pageNumber} done!`);
     } catch (error) {
@@ -56,7 +56,7 @@ const generateStaticHtml = async (path = "../html/") => {
       break;
     }
   }
-  await createIndexHtml();
+  await createIndexHtml(path);
 };
 
 await generateStaticHtml();
