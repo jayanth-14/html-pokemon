@@ -1,0 +1,161 @@
+.normal-badge {
+  background-color: #a8a77a;
+  color: #000;
+}
+
+.fire-badge {
+  background-color: #ee8130;
+  color: #fff;
+}
+
+.water-badge {
+  background-color: #6390f0;
+  color: #fff;
+}
+
+.electric-badge {
+  background-color: #f7d02c;
+  color: #000;
+}
+
+.grass-badge {
+  background-color: #7ac74c;
+  color: #000;
+}
+
+.ice-badge {
+  background-color: #96d9d6;
+  color: #000;
+}
+
+.fighting-badge {
+  background-color: #c22e28;
+  color: #fff;
+}
+
+.poison-badge {
+  background-color: #a33ea1;
+  color: #fff;
+}
+
+.ground-badge {
+  background-color: #e2bf65;
+  color: #000;
+}
+
+.flying-badge {
+  background-color: #a98ff3;
+  color: #000;
+}
+
+.psychic-badge {
+  background-color: #f95587;
+  color: #fff;
+}
+
+.bug-badge {
+  background-color: #a6b91a;
+  color: #000;
+}
+
+.rock-badge {
+  background-color: #b6a136;
+  color: #000;
+}
+
+.ghost-badge {
+  background-color: #735797;
+  color: #fff;
+}
+
+.dragon-badge {
+  background-color: #6f35fc;
+  color: #fff;
+}
+
+.dark-badge {
+  background-color: #705746;
+  color: #fff;
+}
+
+.steel-badge {
+  background-color: #b7b7ce;
+  color: #000;
+}
+
+.fairy-badge {
+  background-color: #d685ad;
+  color: #000;
+}
+
+.normal-card {
+  border: 1px solid #a8a77a;
+}
+
+.fire-card {
+  border: 1px solid #ee8130;
+}
+
+.water-card {
+  border: 1px solid #6390f0;
+}
+
+.electric-card {
+  border: 1px solid #f7d02c;
+}
+
+.grass-card {
+  border: 1px solid #7ac74c;
+}
+
+.ice-card {
+  border: 1px solid #96d9d6;
+}
+
+.fighting-card {
+  border: 1px solid #c22e28;
+}
+
+.poison-card {
+  border: 1px solid #a33ea1;
+}
+
+.ground-card {
+  border: 1px solid #e2bf65;
+}
+
+.flying-card {
+  border: 1px solid #a98ff3;
+}
+
+.psychic-card {
+  border: 1px solid #f95587;
+}
+
+.bug-card {
+  border: 1px solid #a6b91a;
+}
+
+.rock-card {
+  border: 1px solid #b6a136;
+}
+
+.ghost-card {
+  border: 1px solid #735797;
+}
+
+.dragon-card {
+  border: 1px solid #6f35fc;
+}
+
+.dark-card {
+  border: 1px solid #705746;
+}
+
+.steel-card {
+  border: 1px solid #b7b7ce;
+}
+
+.fairy-card {
+  border: 1px solid #d685ad;
+}

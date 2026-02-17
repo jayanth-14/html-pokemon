@@ -1,0 +1,173 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #15141b;
+  color: #f2f2f2;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.navbar .logo {
+  width: 25vw;
+}
+
+.navbar .sub-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+}
+
+.navbar .sub-logo h2 {
+  font-size: 43px;
+  font-weight: 400;
+}
+
+#pokeball-image {
+  width: 40px;
+}
+
+.cards-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 10vh 5vw;
+  display: flex;
+  justify-content: space-between;
+  /* align-content: space-between; */
+  row-gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 150px;
+  height: 370px;
+  background-color: #202021;
+  padding: 1em 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 23px;
+  position: relative;
+  border-radius: 10px;
+}
+
+.card-image-container {
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  background: linear-gradient(
+    rgba(214, 214, 214, 0.325),
+    rgba(77, 77, 77, 0.1)
+  );
+  border-radius: 50%;
+  box-shadow: 0px -10px 15px 7px rgba(77, 77, 77, 0.5);
+}
+
+.card-image {
+  width: 85%;
+  height: 85%;
+  margin-top: 15px;
+}
+
+.card-details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 20px;
+}
+.card-details .name {
+  font-size: 34px;
+  font-weight: 300;
+}
+
+.card-details .stats {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0px;
+}
+
+.stat {
+  display: flex;
+}
+
+.card-details .stats .stat {
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  color: #fff;
+}
+
+.stat-name {
+  font-size: 18px;
+  font-weight: 300;
+  color: #888888;
+  display: inline;
+}
+
+.stat ul {
+  list-style: none;
+  display: inline;
+  display: flex;
+  column-gap: 5px;
+  margin-left: 10px;
+}
+
+.type-name {
+  background-color: white;
+  color: #333;
+  width: fit-content;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 10px;
+  text-transform: capitalize;
+}
+
+.card-id {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: #333;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.card-id::before {
+  content: "#";
+}

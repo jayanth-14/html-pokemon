@@ -1,0 +1,26 @@
+footer {
+  width: 60%;
+  margin: 0 auto 80px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.pagination {
+  display: flex;
+  gap: 20px;
+}
+
+.pagination-button {
+  padding: 10px 20px;
+  background-color: #202021;
+  border-radius: 999px;
+  color: #eee;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.active-pagination-button,
+.pagination-button:hover {
+  background-color: #f51c20;
+}
