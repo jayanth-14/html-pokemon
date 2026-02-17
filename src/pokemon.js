@@ -1,11 +1,12 @@
 import { generateCardHtml } from "./render.js";
 
-const extractImageUrl = (data) => data.sprites.other.dream_world.front_default;
+const extractImageUrl = (data) =>
+  data["sprites"]["other"]["official-artwork"]["front_default"];
 
 const extractTypes = (data) =>
   data.types.map((typeSlot) => typeSlot.type.name.trim());
 
-const   parsePokemonData = (data) => {
+const parsePokemonData = (data) => {
   return {
     id: data.id,
     name: data.name,
