@@ -6,8 +6,8 @@ export const handleRequest = async (request) => {
   // if (path === "/") {
   //   return await handleHomePage();
   // }
-  if (path.startsWith("/css/")) {
-    return new Response(await Deno.readTextFile("." + path));
+  if (path.startsWith("./css/")) {
+    return new Response(await Deno.readTextFile(path));
   }
   let pageNumber = Number(path.match(/\d+/));
   pageNumber = pageNumber <= 0 ? 1 : pageNumber;

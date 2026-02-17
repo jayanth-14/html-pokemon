@@ -37,12 +37,12 @@ const generateFooterHtml = (id) => {
         ${
     previous <= 0
       ? ""
-      : `<a href="/${previous}" class="pagination-button">previous</a>
-      <a href="/${previous}" class="pagination-button">${previous}</a>`
+      : `<a href="./page${previous}.html" class="pagination-button">previous</a>
+      <a href="./page${previous}.html" class="pagination-button">${previous}</a>`
   }
-        <a href="/${current}" class="pagination-button active-pagination-button">${current}</a>
-        <a href="/${next}" class="pagination-button">${next}</a>
-        <a href="/${next}" class="pagination-button">next</a>
+        <a href="./page${current}.html" class="pagination-button active-pagination-button">${current}</a>
+        <a href="./page${next}.html" class="pagination-button">${next}</a>
+        <a href="./page${next}.html" class="pagination-button">next</a>
       </section>
     </footer>`;
 };
@@ -51,9 +51,9 @@ const generateHomePageTemplate = () =>
   `<html>
   <head>
     <title>pokemon</title>
-    <link rel="stylesheet" href="/css/index.css" />
-    <link rel="stylesheet" href="/css/types.css" />
-    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/types.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
   </head>
   <body>
     <section class="navbar">
@@ -85,7 +85,7 @@ export const generateHomePage = (id, cardsHtml) => {
   const template = generateHomePageTemplate();
   return template.replace("{{cards}}", cardsHtml).replace(
     "{{footer}}",
-    generateFooterHtml(id),
+    generateFooterHtml(id + 1),
   );
   // return template;
 };

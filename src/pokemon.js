@@ -5,7 +5,7 @@ const extractImageUrl = (data) => data.sprites.other.dream_world.front_default;
 const extractTypes = (data) =>
   data.types.map((typeSlot) => typeSlot.type.name.trim());
 
-const parsePokemonData = (data) => {
+const   parsePokemonData = (data) => {
   return {
     id: data.id,
     name: data.name,
@@ -19,6 +19,7 @@ const parsePokemonData = (data) => {
 export const fetchPokemon = async (url) => {
   const res = await fetch(url);
   const data = await res.json();
+  console.log(`Parsing pokemon : ${data.id}`);
   return parsePokemonData(data);
 };
 
@@ -27,10 +28,10 @@ export const renderPokemons = async (offset = 0, limit = 20) => {
     `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`,
   );
   const data = await res.json();
-  const html = await Promise.all(
+  const cards = await Promise.all(
     data.results.map(async ({ url }) =>
       generateCardHtml(await fetchPokemon(url))
     ),
   );
-  return html.join("\n");
+  return cards.join("\n");
 };
